@@ -37,6 +37,10 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- Favicon -->
+    <link rel="icon" href="https://sjc.microlink.io/LR42Cxos3h4Eq273Icso1MF3vBiBW0Vkn9lmQ9AT48kYKjcGk8N7y34UFyf6jHzzBoNgewqnJoxGyUTt_T2qlQ.jpeg" type="image/x-icon">
+
+    <!-- Styles -->
     <style>
         :root {
             --primary-color: #FF0000;
@@ -44,6 +48,8 @@
             --text-secondary: #666666;
             --background: #FFFFFF;
             --background-alt: #F5F5F5;
+            --border-radius: 0.5rem;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         * {
@@ -84,6 +90,22 @@
             font-size: 1.25rem;
             color: var(--primary-color);
             text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
         }
 
         .hero {
@@ -127,7 +149,8 @@
         .feature-card {
             background: var(--background-alt);
             padding: 2rem;
-            border-radius: 0.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
             transition: transform 0.2s;
         }
 
@@ -171,6 +194,11 @@
             .hero p {
                 font-size: 1rem;
             }
+
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
@@ -180,9 +208,9 @@
             <a href="/" class="logo">
                 🚀 Recent Coders
             </a>
-            <div>
-                <a href="guide.html" class="button">Guide</a>
-                <a href="faq.html" class="button">FAQ</a>
+            <div class="nav-links">
+                <a href="guide.html">Guide</a>
+                <a href="faq.html">FAQ</a>
                 <a href="https://t.me/ScriptersShop" class="button" target="_blank" rel="noopener">
                     Join Community
                 </a>
@@ -225,6 +253,12 @@
 
     <footer>
         <p>© 2024 Recent Coders. All rights reserved.</p>
+        <p>Made with ❤️</p>
+        <p>Donation Address: 0xBFD25B75E9a742cEC6ea68D06d631f6EF14Cfa82</p>
+        <div class="social-icons">
+            <a href="https://t.me/ScriptersShop" target="_blank"><i class="fab fa-telegram"></i></a>
+            <a href="https://t.me/ScriptsChats" target="_blank"><i class="fab fa-telegram"></i></a>
+        </div>
     </footer>
 
     <!-- Structured Data -->
@@ -239,8 +273,39 @@
       "sameAs": [
         "https://t.me/ScriptersShop",
         "https://t.me/ScriptsChats"
-      ]
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-800-555-5555",
+        "contactType": "customer service"
+      }
     }
     </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://recentcoders.gitbook.io/community/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Guide",
+        "item": "https://recentcoders.gitbook.io/community/guide.html"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "FAQ",
+        "item": "https://recentcoders.gitbook.io/community/faq.html"
+      }]
+    }
+    </script>
+
+    <!-- Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
