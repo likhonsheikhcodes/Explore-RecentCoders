@@ -23,3 +23,10 @@ Explore RecentCoders is a community-driven project aimed at helping developers a
 - **SEO Optimized**: Our content is optimized for search engines to ensure maximum visibility and reach.
 - **Modern Design**: Clean and modern design for a better reading experience.
 - **Community Support**: Join our community on Telegram to discuss, share, and learn together.
+
+Reading Guides: Browse through our comprehensive guides to learn about various topics.
+Asking Questions: Check out the FAQ sections to find answers to common questions.
+Contributing: Feel free to contribute by adding new content, improving existing guides, or fixing issues.
+
+License
+This project is licensed under the MIT License. See the LICENSE file for more details
