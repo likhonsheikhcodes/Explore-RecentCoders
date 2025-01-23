@@ -1,363 +1,167 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- Primary Meta Tags -->
-    <title>Recent Coders - A Community for Developers | No spam, just coding! 🚀</title>
-    <meta name="title" content="Recent Coders - A Community for Developers | No spam, just coding! 🚀">
-    <meta name="description" content="Join Recent Coders, a thriving developer community focused on pure coding. Learn, share, and grow with fellow developers. No spam, just pure coding knowledge!">
-    <meta name="keywords" content="developer community, coding, programming, software development, learn to code, coding tutorials, safe coding community for kids, programming tutorials for children, beginner-friendly coding lessons for kids, learn to code step-by-step for kids">
-    <meta name="author" content="Recent Coders">
-    <meta name="theme-color" content="#FF0000">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://recentcoders.gitbook.io/community/">
-    <meta property="og:title" content="Recent Coders - A Community for Developers">
-    <meta property="og:description" content="Join Recent Coders, a thriving developer community focused on pure coding. Learn, share, and grow with fellow developers.">
-    <meta property="og:image" content="https://sjc.microlink.io/LR42Cxos3h4Eq273Icso1MF3vBiBW0Vkn9lmQ9AT48kYKjcGk8N7y34UFyf6jHzzBoNgewqnJoxGyUTt_T2qlQ.jpeg">
-    <meta property="og:image:alt" content="Recent Coders logo and branding">
-    <meta property="og:site_name" content="Recent Coders">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://recentcoders.gitbook.io/community/">
-    <meta property="twitter:title" content="Recent Coders - A Community for Developers">
-    <meta property="twitter:description" content="Join Recent Coders, a thriving developer community focused on pure coding. Learn, share, and grow with fellow developers.">
-    <meta property="twitter:image" content="https://sjc.microlink.io/LR42Cxos3h4Eq273Icso1MF3vBiBW0Vkn9lmQ9AT48kYKjcGk8N7y34UFyf6jHzzBoNgewqnJoxGyUTt_T2qlQ.jpeg">
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://recentcoders.gitbook.io/community/">
-
-    <!-- Preconnect to required origins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Favicon -->
-    <link rel="icon" href="https://sjc.microlink.io/LR42Cxos3h4Eq273Icso1MF3vBiBW0Vkn9lmQ9AT48kYKjcGk8N7y34UFyf6jHzzBoNgewqnJoxGyUTt_T2qlQ.jpeg" type="image/x-icon">
-
-    <!-- Styles -->
-    <style>
-        :root {
-            --primary-color: #FF0000;
-            --text-primary: #FFFFFF;
-            --text-secondary: #AAAAAA;
-            --background: #1A1A1A;
-            --background-alt: #2E2E2E;
-            --border-radius: 0.5rem;
-            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
-            line-height: 1.5;
-            color: var(--text-primary);
-            background: var(--background);
-        }
-
-        .header {
-            background: var(--background);
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            padding: 1rem;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-weight: 700;
-            font-size: 1.25rem;
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .nav-links a {
-            color: var(--text-primary);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
-
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://sjc.microlink.io/LR42Cxos3h4Eq273Icso1MF3vBiBW0Vkn9lmQ9AT48kYKjcGk8N7y34UFyf6jHzzBoNgewqnJoxGyUTt_T2qlQ.jpeg');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 4rem 1rem;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            opacity: 0.9;
-        }
-
-        .content {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .feature-card {
-            background: var(--background-alt);
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            transition: transform 0.2s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .cta {
-            text-align: center;
-            padding: 4rem 1rem;
-            background: var(--background-alt);
-        }
-
-        .button {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            background: var(--primary-color);
-            color: white;
-            text-decoration: none;
-            border-radius: 0.25rem;
-            font-weight: 500;
-            transition: opacity 0.2s;
-        }
-
-        .button:hover {
-            opacity: 0.9;
-        }
-
-        footer {
-            background: var(--text-primary);
-            color: var(--background);
-            padding: 2rem 1rem;
-            text-align: center;
-        }
-
-        .social-icons {
-            margin-top: 1rem;
-        }
-
-        .social-icons a {
-            color: var(--background);
-            margin: 0 0.5rem;
-            font-size: 1.5rem;
-            transition: color 0.2s;
-        }
-
-        .social-icons a:hover {
-            color: var(--primary-color);
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .nav-links {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-
-        /* Loader Styles */
-        .loader-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--background);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        .loader {
-            width: 100px;
-            height: 100px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Recent Coders - Elevate Your Coding Journey</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Loader -->
-    <div class="loader-container" id="loader">
-        <dotlottie-player src="https://lottie.host/6f4ee854-3625-4849-8985-e423a0752949/hZWZsrb0zk.json" background="transparent" speed="1" class="loader" direction="-1" playMode="normal" loop controls autoplay hover></dotlottie-player>
+
+<!-- Loader -->
+<div id="loader" class="loader-container">
+  <div class="loader">Loading...</div>
+</div>
+
+<header class="header" id="header">
+  <nav class="nav-container">
+    <a href="#" class="logo">
+      <img src="logo.svg" alt="Recent Coders Logo">
+    </a>
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+      <i class="fas fa-bars"></i>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="https://t.me/ScriptersShop" class="button">Join Community</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="close-menu-btn" id="closeMenuBtn">
+    <i class="fas fa-times"></i>
+  </button>
+  <ul>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="https://t.me/ScriptersShop">Join Community</a></li>
+  </ul>
+</div>
+
+<main>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Elevate Your Coding Journey</h1>
+      <p>Join our thriving developer community focused on pure coding knowledge and growth. No spam, just cutting-edge techniques and best practices.</p>
+      <a href="#features" class="button">Explore Features</a>
     </div>
+  </section>
 
-    <header class="header">
-        <nav class="nav-container">
-            <a href="/" class="logo">
-                🚀 Recent Coders
-            </a>
-            <div class="nav-links">
-                <a href="guide.html">Guide</a>
-                <a href="faq.html">FAQ</a>
-                <a href="https://t.me/ScriptersShop" class="button" target="_blank" rel="noopener">
-                    Join Community
-                </a>
-            </div>
-        </nav>
-    </header>
+  <section id="features" class="content">
+    <h2>Why Choose Recent Coders?</h2>
+    <div class="features">
+      <article class="feature-card">
+        <h3>Collaborative Learning</h3>
+        <p>Engage with passionate developers, share knowledge, and grow together in a supportive environment.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Cutting-Edge Content</h3>
+        <p>Stay updated with the latest in web development, AI, blockchain, and more.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Spam-Free Zone</h3>
+        <p>Focus on what matters - clean, efficient, and practical coding solutions without distractions.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Expert Mentorship</h3>
+        <p>Learn from industry professionals and get guidance on your coding journey.</p>
+      </article>
+    </div>
+  </section>
 
-    <main>
-        <section class="hero">
-            <h1>A Community for Developers</h1>
-            <p>No spam, just coding! Join our thriving developer community focused on pure coding knowledge and growth.</p>
-        </section>
+  <section id="about" class="cta">
+    <h2>About Recent Coders</h2>
+    <p>We're a dedicated community of developers, committed to fostering a space where coding enthusiasts can thrive. Our mission is to provide a platform for learning, sharing, and growing together, free from distractions and spam.</p>
+    <a href="https://t.me/ScriptersShop" class="button">Join Our Community</a>
+  </section>
 
-        <section class="content">
-            <div class="features">
-                <article class="feature-card">
-                    <h2>Learn Together</h2>
-                    <p>Join a community of passionate developers sharing knowledge and experiences.</p>
-                </article>
-                <article class="feature-card">
-                    <h2>Pure Coding</h2>
-                    <p>Focus on what matters - clean, efficient, and practical coding solutions.</p>
-                </article>
-                <article class="feature-card">
-                    <h2>No Spam</h2>
-                    <p>Quality over quantity. Get relevant content without the noise.</p>
-                </article>
-            </div>
-        </section>
+  <section id="contact" class="content">
+    <h2>Get in Touch</h2>
+    <p>Have questions or suggestions? We'd love to hear from you!</p>
+    <form id="contactForm" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="button">Send Message</button>
+    </form>
+  </section>
+</main>
 
-        <section class="cta">
-            <h2>Ready to Join?</h2>
-            <p>Become part of our growing developer community today!</p>
-            <br>
-            <a href="https://t.me/ScriptersShop" class="button" target="_blank" rel="noopener">
-                Join Now
-            </a>
-        </section>
-    </main>
+<footer>
+  <div class="footer-content">
+    <p>&copy; 2024 Recent Coders. All rights reserved.</p>
+    <p>Empowering developers to code the future.</p>
+    <p>Donation Address: 0xBFD25B75E9a742cEC6ea68D06d631f6EF14Cfa82</p>
+  </div>
+  <div class="social-icons">
+    <a href="https://t.me/ScriptersShop" target="_blank" rel="noopener"><i class="fab fa-telegram"></i></a>
+    <a href="https://t.me/ScriptsChats" target="_blank" rel="noopener"><i class="fab fa-telegram"></i></a>
+    <a href="#" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+    <a href="#" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+  </div>
+</footer>
 
-    <footer>
-        <p>© 2024 Recent Coders. All rights reserved.</p>
-        <p>Made with ❤️</p>
-        <p>Donation Address: 0xBFD25B75E9a742cEC6ea68D06d631f6EF14Cfa82</p>
-        <div class="social-icons">
-            <a href="https://t.me/ScriptersShop" target="_blank"><i class="fab fa-telegram"></i></a>
-            <a href="https://t.me/ScriptsChats" target="_blank"><i class="fab fa-telegram"></i></a>
-        </div>
-    </footer>
+<a href="#" class="scroll-to-top" id="scrollToTop">
+  <i class="fas fa-chevron-up"></i>
+</a>
 
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Recent Coders",
-      "description": "A community for developers focused on pure coding knowledge",
-      "url": "https://recentcoders.gitbook.io/community/",
-      "logo": "https://sjc.microlink.io/LR42Cxos3h4Eq273Icso1MF3vBiBW0Vkn9lmQ9AT48kYKjcGk8N7y34UFyf6jHzzBoNgewqnJoxGyUTt_T2qlQ.jpeg",
-      "sameAs": [
-        "https://t.me/ScriptersShop",
-        "https://t.me/ScriptsChats"
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+1-800-555-5555",
-        "contactType": "customer service"
-      }
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  // Loader
+  $(window).on('load', function() {
+    $('#loader').fadeOut('slow');
+  });
+
+  // Header scroll effect
+  $(window).on('scroll', function() {
+    if ($(window).scrollTop() > 50) {
+      $('#header').addClass('scrolled');
+    } else {
+      $('#header').removeClass('scrolled');
     }
-    </script>
+  });
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://recentcoders.gitbook.io/community/"
-      },{
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Guide",
-        "item": "https://recentcoders.gitbook.io/community/guide.html"
-      },{
-        "@type": "ListItem",
-        "position": 3,
-        "name": "FAQ",
-        "item": "https://recentcoders.gitbook.io/community/faq.html"
-      }]
+  // Mobile menu
+  $('#mobileMenuBtn').on('click', function() {
+    $('#mobileMenu').addClass('active');
+  });
+
+  $('#closeMenuBtn').on('click', function() {
+    $('#mobileMenu').removeClass('active');
+  });
+
+  // Smooth scrolling for anchor links
+  $('a[href*="#"]').on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top }, 500);
+  });
+
+  // Scroll to top button
+  $(window).on('scroll', function() {
+    if ($(this).scrollTop() > 300) {
+      $('#scrollToTop').fadeIn();
+    } else {
+      $('#scrollToTop').fadeOut();
     }
-    </script>
+  });
 
-    <!-- Font Awesome for Icons -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  $('#scrollToTop').on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, 500);
+  });
 
-    <!-- Lottie Player for Loader -->
-    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
-
-    <!-- Loader Script -->
-    <script>
-        window.addEventListener('load', function() {
-            const loader = document.getElementById('loader');
-            loader.style.display = 'none';
-        });
-    </script>
+  // Form submission (you can customize this for actual submission)
+  $('#contactForm').on('submit', function(e) {
+    e.preventDefault();
+    alert('Thank you for your message! We will get back to you soon.');
+    $(this).trigger('reset');
+  });
+</script>
 </body>
 </html>
