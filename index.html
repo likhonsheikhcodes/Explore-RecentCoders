@@ -19,6 +19,8 @@
     <meta property="og:title" content="Recent Coders - A Community for Developers">
     <meta property="og:description" content="Join Recent Coders, a thriving developer community focused on pure coding. Learn, share, and grow with fellow developers.">
     <meta property="og:image" content="https://sjc.microlink.io/LR42Cxos3h4Eq273Icso1MF3vBiBW0Vkn9lmQ9AT48kYKjcGk8N7y34UFyf6jHzzBoNgewqnJoxGyUTt_T2qlQ.jpeg">
+    <meta property="og:image:alt" content="Recent Coders logo and branding">
+    <meta property="og:site_name" content="Recent Coders">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
@@ -108,51 +110,6 @@
             color: var(--primary-color);
         }
 
-        .language-switcher {
-            position: relative;
-            display: inline-block;
-        }
-
-        .language-switcher button {
-            background: var(--background-alt);
-            color: var(--text-primary);
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: var(--border-radius);
-            cursor: pointer;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .language-switcher ul {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: var(--background-alt);
-            color: var(--text-primary);
-            list-style: none;
-            margin: 0;
-            padding: 0.5rem;
-            border-radius: var(--border-radius);
-            display: none;
-            z-index: 100;
-        }
-
-        .language-switcher ul li {
-            padding: 0.5rem 1rem;
-            cursor: pointer;
-        }
-
-        .language-switcher ul li:hover {
-            background: var(--primary-color);
-        }
-
-        .language-switcher:hover ul {
-            display: block;
-        }
-
         .hero {
             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://sjc.microlink.io/LR42Cxos3h4Eq273Icso1MF3vBiBW0Vkn9lmQ9AT48kYKjcGk8N7y34UFyf6jHzzBoNgewqnJoxGyUTt_T2qlQ.jpeg');
             background-size: cover;
@@ -178,6 +135,89 @@
             opacity: 0.9;
         }
 
+        .content {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: var(--background-alt);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            transition: transform 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .cta {
+            text-align: center;
+            padding: 4rem 1rem;
+            background: var(--background-alt);
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 0.25rem;
+            font-weight: 500;
+            transition: opacity 0.2s;
+        }
+
+        .button:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            background: var(--text-primary);
+            color: var(--background);
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        .social-icons {
+            margin-top: 1rem;
+        }
+
+        .social-icons a {
+            color: var(--background);
+            margin: 0 0.5rem;
+            font-size: 1.5rem;
+            transition: color 0.2s;
+        }
+
+        .social-icons a:hover {
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
         /* Loader Styles */
         .loader-container {
             position: fixed;
@@ -201,24 +241,20 @@
 <body>
     <!-- Loader -->
     <div class="loader-container" id="loader">
-        <dotlottie-player src="https://lottie.host/6f4ee854-3625-4849-8985-e423a0752949/hZWZsrb0zk.json" background="transparent" speed="1" class="loader" autoplay loop></dotlottie-player>
+        <dotlottie-player src="https://lottie.host/6f4ee854-3625-4849-8985-e423a0752949/hZWZsrb0zk.json" background="transparent" speed="1" class="loader" direction="-1" playMode="normal" loop controls autoplay hover></dotlottie-player>
     </div>
 
     <header class="header">
         <nav class="nav-container">
-            <a href="/" class="logo">🚀 Recent Coders</a>
+            <a href="/" class="logo">
+                🚀 Recent Coders
+            </a>
             <div class="nav-links">
                 <a href="guide.html">Guide</a>
                 <a href="faq.html">FAQ</a>
-                <a href="https://t.me/ScriptersShop" class="button" target="_blank" rel="noopener">Join Community</a>
-            </div>
-            <div class="language-switcher">
-                <button id="lang-button">🌍 English</button>
-                <ul id="lang-menu">
-                    <li data-lang="en">🇺🇸 English</li>
-                    <li data-lang="es">🇪🇸 Español</li>
-                    <li data-lang="fr">🇫🇷 Français</li>
-                </ul>
+                <a href="https://t.me/ScriptersShop" class="button" target="_blank" rel="noopener">
+                    Join Community
+                </a>
             </div>
         </nav>
     </header>
@@ -228,14 +264,95 @@
             <h1>A Community for Developers</h1>
             <p>No spam, just coding! Join our thriving developer community focused on pure coding knowledge and growth.</p>
         </section>
+
+        <section class="content">
+            <div class="features">
+                <article class="feature-card">
+                    <h2>Learn Together</h2>
+                    <p>Join a community of passionate developers sharing knowledge and experiences.</p>
+                </article>
+                <article class="feature-card">
+                    <h2>Pure Coding</h2>
+                    <p>Focus on what matters - clean, efficient, and practical coding solutions.</p>
+                </article>
+                <article class="feature-card">
+                    <h2>No Spam</h2>
+                    <p>Quality over quantity. Get relevant content without the noise.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="cta">
+            <h2>Ready to Join?</h2>
+            <p>Become part of our growing developer community today!</p>
+            <br>
+            <a href="https://t.me/ScriptersShop" class="button" target="_blank" rel="noopener">
+                Join Now
+            </a>
+        </section>
     </main>
 
     <footer>
         <p>© 2024 Recent Coders. All rights reserved.</p>
+        <p>Made with ❤️</p>
+        <p>Donation Address: 0xBFD25B75E9a742cEC6ea68D06d631f6EF14Cfa82</p>
+        <div class="social-icons">
+            <a href="https://t.me/ScriptersShop" target="_blank"><i class="fab fa-telegram"></i></a>
+            <a href="https://t.me/ScriptsChats" target="_blank"><i class="fab fa-telegram"></i></a>
+        </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Recent Coders",
+      "description": "A community for developers focused on pure coding knowledge",
+      "url": "https://recentcoders.gitbook.io/community/",
+      "logo": "https://sjc.microlink.io/LR42Cxos3h4Eq273Icso1MF3vBiBW0Vkn9lmQ9AT48kYKjcGk8N7y34UFyf6jHzzBoNgewqnJoxGyUTt_T2qlQ.jpeg",
+      "sameAs": [
+        "https://t.me/ScriptersShop",
+        "https://t.me/ScriptsChats"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-800-555-5555",
+        "contactType": "customer service"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://recentcoders.gitbook.io/community/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Guide",
+        "item": "https://recentcoders.gitbook.io/community/guide.html"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "FAQ",
+        "item": "https://recentcoders.gitbook.io/community/faq.html"
+      }]
+    }
+    </script>
+
+    <!-- Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- Lottie Player for Loader -->
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+
+    <!-- Loader Script -->
     <script>
         window.addEventListener('load', function() {
             const loader = document.getElementById('loader');
