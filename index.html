@@ -9,16 +9,28 @@
     <title>Recent Coders - A Community for Developers | No spam, just coding! 🚀</title>
     <meta name="title" content="Recent Coders - A Community for Developers | No spam, just coding! 🚀">
     <meta name="description" content="Join Recent Coders, a thriving developer community focused on pure coding. Learn, share, and grow with fellow developers. No spam, just pure coding knowledge!">
-    <meta name="keywords" content="developer community, coding, programming, software development, learn to code, coding tutorials">
-    <meta name="author" content="Recent Coders">
-    <meta name="theme-color" content="#FF0000">
+    <meta name="keywords" content="developer community, coding, programming, software development, learn to code, coding tutorials, developer networking, coding skills, programming community, safe coding community for kids, programming tutorials for children, beginner-friendly coding lessons for kids, learn to code step-by-step for kids">
+    <meta name="author" content="Recent Coders Team">
+
+    <!-- Enhanced Meta Tags -->
+    <meta name="theme-color" content="#30336B">
+    <meta property="og:site_name" content="Recent Coders">
+    <meta property="og:image:alt" content="Recent Coders logo and branding">
+
+    <!-- Robots and Crawling -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://recentcoders.gitbook.io/community/">
     <meta property="og:title" content="Recent Coders - A Community for Developers">
-    <meta property="og:description" content="Join Recent Coders, a thriving developer community focused on pure coding. Learn, share, and grow with fellow developers.">
+    <meta property="og:description" content="Join Recent Coders, a thriving developer community focused on pure coding knowledge and growth.">
     <meta property="og:image" content="https://sjc.microlink.io/LR42Cxos3h4Eq273Icso1MF3vBiBW0Vkn9lmQ9AT48kYKjcGk8N7y34UFyf6jHzzBoNgewqnJoxGyUTt_T2qlQ.jpeg">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Language Alternates -->
+    <link rel="alternate" hreflang="en" href="https://recentcoders.gitbook.io/community/" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
@@ -27,285 +39,223 @@
     <meta property="twitter:description" content="Join Recent Coders, a thriving developer community focused on pure coding. Learn, share, and grow with fellow developers.">
     <meta property="twitter:image" content="https://sjc.microlink.io/LR42Cxos3h4Eq273Icso1MF3vBiBW0Vkn9lmQ9AT48kYKjcGk8N7y34UFyf6jHzzBoNgewqnJoxGyUTt_T2qlQ.jpeg">
 
-    <!-- Canonical URL -->
+    <!-- Canonical and Performance -->
     <link rel="canonical" href="https://recentcoders.gitbook.io/community/">
-
-    <!-- Preconnect to required origins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <!-- Favicon -->
     <link rel="icon" href="https://sjc.microlink.io/LR42Cxos3h4Eq273Icso1MF3vBiBW0Vkn9lmQ9AT48kYKjcGk8N7y34UFyf6jHzzBoNgewqnJoxGyUTt_T2qlQ.jpeg" type="image/x-icon">
 
-    <!-- Styles -->
+    <!-- Material-UI CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
     <style>
         :root {
-            --primary-color: #FF0000;
-            --text-primary: #1A1A1A;
-            --text-secondary: #666666;
-            --background: #FFFFFF;
-            --background-alt: #F5F5F5;
-            --border-radius: 0.5rem;
-            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --primary-color: #30336B;
+            --secondary-color: #4A90E2;
+            --background-light: #F5F7FA;
+            --text-primary: #333;
+            --text-secondary: #666;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { box-sizing: border-box; scroll-behavior: smooth; }
 
         body {
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
-            line-height: 1.5;
+            font-family: 'Roboto', 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
             color: var(--text-primary);
-            background: var(--background);
+            background-color: var(--background-light);
+            line-height: 1.6;
         }
 
-        .header {
-            background: var(--background);
-            border-bottom: 1px solid rgba(0,0,0,0.1);
-            padding: 1rem;
+        /* Hamburger Menu Styles */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 3px 0;
+            transition: 0.4s;
+        }
+
+        .sticky-header {
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
+            transition: background-color 0.3s;
         }
 
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .features-grid .feature-card {
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-weight: 700;
-            font-size: 1.25rem;
-            color: var(--primary-color);
-            text-decoration: none;
+        .features-grid .feature-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
 
-        .nav-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .nav-links a {
-            color: var(--text-primary);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
-
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://sjc.microlink.io/LR42Cxos3h4Eq273Icso1MF3vBiBW0Vkn9lmQ9AT48kYKjcGk8N7y34UFyf6jHzzBoNgewqnJoxGyUTt_T2qlQ.jpeg');
-            background-size: cover;
-            background-position: center;
+        .floating-join-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--secondary-color);
             color: white;
-            padding: 4rem 1rem;
-            text-align: center;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            z-index: 1000;
+            transition: transform 0.3s;
         }
 
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            opacity: 0.9;
-        }
-
-        .content {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .feature-card {
-            background: var(--background-alt);
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            transition: transform 0.2s;
-        }
-
-        .feature-card:hover {
+        .floating-join-btn:hover {
             transform: translateY(-5px);
         }
 
-        .cta {
-            text-align: center;
-            padding: 4rem 1rem;
-            background: var(--background-alt);
-        }
-
-        .button {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            background: var(--primary-color);
-            color: white;
-            text-decoration: none;
-            border-radius: 0.25rem;
-            font-weight: 500;
-            transition: opacity 0.2s;
-        }
-
-        .button:hover {
-            opacity: 0.9;
-        }
-
-        footer {
-            background: var(--text-primary);
-            color: white;
-            padding: 2rem 1rem;
-            text-align: center;
-        }
-
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
             .nav-links {
+                display: none;
                 flex-direction: column;
-                align-items: center;
+                width: 100%;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: var(--primary-color);
+                padding: 1rem;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links.active {
+                display: flex;
             }
         }
     </style>
 </head>
 <body>
-    <header class="header">
-        <nav class="nav-container">
-            <a href="/" class="logo">
-                🚀 Recent Coders
-            </a>
-            <div class="nav-links">
-                <a href="guide.html">Guide</a>
-                <a href="faq.html">FAQ</a>
-                <a href="https://t.me/ScriptersShop" class="button" target="_blank" rel="noopener">
-                    Join Community
-                </a>
+    <!-- Sticky Header with Hamburger Menu -->
+    <header class="sticky-header">
+        <nav style="background-color: var(--primary-color); color: white; padding: 1rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto;">
+                <div style="display: flex; align-items: center;">
+                    <span style="font-size: 1.5rem; font-weight: bold;">🚀 Recent Coders</span>
+                </div>
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+
+                <div class="nav-links">
+                    <a href="/" style="color: white; margin-right: 1rem; text-decoration: none;">Home</a>
+                    <a href="/guide" style="color: white; margin-right: 1rem; text-decoration: none;">Guide</a>
+                    <a href="/faq" style="color: white; margin-right: 1rem; text-decoration: none;">FAQ</a>
+                    <a href="https://t.me/ScriptersShop"
+                       style="background-color: var(--secondary-color); color: white; padding: 0.5rem 1rem; border-radius: 4px; text-decoration: none;">
+                        Join Community
+                    </a>
+                </div>
             </div>
         </nav>
     </header>
 
-    <main>
-        <section class="hero">
-            <h1>A Community for Developers</h1>
-            <p>No spam, just coding! Join our thriving developer community focused on pure coding knowledge and growth.</p>
-        </section>
+    <!-- Floating Join Button -->
+    <a href="https://t.me/ScriptersShop" class="floating-join-btn">Join Now</a>
 
-        <section class="content">
-            <div class="features">
-                <article class="feature-card">
-                    <h2>Learn Together</h2>
-                    <p>Join a community of passionate developers sharing knowledge and experiences.</p>
-                </article>
-                <article class="feature-card">
-                    <h2>Pure Coding</h2>
-                    <p>Focus on what matters - clean, efficient, and practical coding solutions.</p>
-                </article>
-                <article class="feature-card">
-                    <h2>No Spam</h2>
-                    <p>Quality over quantity. Get relevant content without the noise.</p>
-                </article>
-            </div>
-        </section>
-
-        <section class="cta">
-            <h2>Ready to Join?</h2>
-            <p>Become part of our growing developer community today!</p>
-            <br>
-            <a href="https://t.me/ScriptersShop" class="button" target="_blank" rel="noopener">
-                Join Now
-            </a>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2024 Recent Coders. All rights reserved.</p>
-        <p>Made with ❤️</p>
-        <p>Donation Address: 0xBFD25B75E9a742cEC6ea68D06d631f6EF14Cfa82</p>
-        <div class="social-icons">
-            <a href="https://t.me/ScriptersShop" target="_blank"><i class="fab fa-telegram"></i></a>
-            <a href="https://t.me/ScriptsChats" target="_blank"><i class="fab fa-telegram"></i></a>
+    <!-- Hero Section with Subtle Animation -->
+    <section class="hero-section" style="position: relative; overflow: hidden;">
+        <div style="position: absolute; width: 100%; height: 100%; background: linear-gradient(rgba(48, 51, 107, 0.85), rgba(48, 51, 107, 0.85)), url('https://sjc.microlink.io/LR42Cxos3h4Eq273Icso1MF3vBiBW0Vkn9lmQ9AT48kYKjcGk8N7y34UFyf6jHzzBoNgewqnJoxGyUTt_T2qlQ.jpeg') center/cover no-repeat; animation: heroBackground 10s infinite alternate;"></div>
+        <div style="position: relative; z-index: 10; text-align: center; color: white; padding: 4rem 1rem;">
+            <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">A Community for Developers</h1>
+            <p style="max-width: 700px; margin: 0 auto; opacity: 0.9; font-size: 1.2rem;">
+                No spam, just coding! Join our thriving developer community focused on pure coding knowledge and growth.
+            </p>
+            <a href="#features" style="display: inline-block; margin-top: 1.5rem; background-color: var(--secondary-color); color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 4px;">Get Started</a>
         </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; padding: 2rem; max-width: 1200px; margin: 0 auto;">
+        <div class="feature-card" style="background-color: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center;">
+            <i class="fas fa-users" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+            <h2 style="color: var(--primary-color);">Learn Together</h2>
+            <p>Join a community of passionate developers sharing knowledge and experiences.</p>
+        </div>
+        <div class="feature-card" style="background-color: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center;">
+            <i class="fas fa-code" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+            <h2 style="color: var(--primary-color);">Pure Coding</h2>
+            <p>Focus on what matters - clean, efficient, and practical coding solutions.</p>
+        </div>
+        <div class="feature-card" style="background-color: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center;">
+            <i class="fas fa-filter" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+            <h2 style="color: var(--primary-color);">No Spam</h2>
+            <p>Quality over quantity. Get relevant content without the noise.</p>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section style="background-color: var(--background-light); text-align: center; padding: 3rem;">
+        <h2 style="color: var(--primary-color);">Stay Updated</h2>
+        <p>Subscribe to our newsletter for the latest coding insights and community updates.</p>
+        <form style="max-width: 500px; margin: 0 auto; display: flex; gap: 1rem;">
+            <input type="email" placeholder="Enter your email" style="flex-grow: 1; padding: 0.75rem; border: 1px solid var(--primary-color); border-radius: 4px;">
+            <button type="submit" style="background-color: var(--primary-color); color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; cursor: pointer;">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-color: var(--primary-color); color: white; text-align: center; padding: 2rem;">
+        <div style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 1rem;">
+            <a href="https://t.me/ScriptersShop" style="color: white;"><i class="fab fa-telegram" style="font-size: 1.5rem;"></i></a>
+            <a href="https://t.me/ScriptsChats" style="color: white;"><i class="fab fa-telegram" style="font-size: 1.5rem;"></i></a>
+        </div>
+        <p>© 2024 Recent Coders. All rights reserved.</p>
+        <p>Made with ❤️ | Donation: 0xBFD25B75E9a742cEC6ea68D06d631f6EF14Cfa82</p>
     </footer>
 
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
+      "@type": "WebSite",
       "name": "Recent Coders",
-      "description": "A community for developers focused on pure coding knowledge",
       "url": "https://recentcoders.gitbook.io/community/",
-      "logo": "https://sjc.microlink.io/LR42Cxos3h4Eq273Icso1MF3vBiBW0Vkn9lmQ9AT48kYKjcGk8N7y34UFyf6jHzzBoNgewqnJoxGyUTt_T2qlQ.jpeg",
-      "sameAs": [
-        "https://t.me/ScriptersShop",
-        "https://t.me/ScriptsChats"
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+1-800-555-5555",
-        "contactType": "customer service"
-      }
+      "description": "A community for developers focused on pure coding knowledge"
     }
     </script>
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://recentcoders.gitbook.io/community/"
-      },{
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Guide",
-        "item": "https://recentcoders.gitbook.io/community/guide.html"
-      },{
-        "@type": "ListItem",
-        "position": 3,
-        "name": "FAQ",
-        "item": "https://recentcoders.gitbook.io/community/faq.html"
-      }]
-    }
-    </script>
+    <script>
+        // Mobile Navigation Toggle
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
 
-    <!-- Font Awesome for Icons -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        // Scroll-based Header Background Change
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.sticky-header');
+            if (window.scrollY > 50) {
+                header.style.backgroundColor = 'rgba(48, 51, 107, 0.95)';
+            } else {
+                header.style.backgroundColor = 'var(--primary-color)';
+            }
+        });
+    </script>
 </body>
 </html>
