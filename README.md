@@ -1,6 +1,6 @@
 # Explore RecentCoders
 
-![Project Logo](path/to/logo.png) <!-- Replace with actual logo path -->
+![Project Logo](https://recentcoders.gitbook.io/~gitbook/image?url=https%3A%2F%2F1896248326-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Forganizations%252FhWBOHlUcgHYrpyyRF34J%252Fsites%252Fsite_3v6UO%252Ficon%252FROHmVQXFedDvGlg5DL1N%252Fphoto_2025-01-22_02-32-36.jpg%3Falt%3Dmedia%26token%3Dbd4f40dd-18cd-49fa-980e-20aefce8523c&width=32&dpr=1&quality=100&sign=dab08d03&sv=2) <!-- Replace with actual logo path -->
 
 ## 🚀 About the Project
 
